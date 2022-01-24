@@ -127,11 +127,11 @@ contents.each_with_index do |row, index|
   date_array << time_date[0]
   time_array << time_date[1]
 
-  # legislators = legislators_by_zipcode(zipcode)
+  legislators = legislators_by_zipcode(zipcode)
 
-  # form_letter = erb_template.result(binding)
+  form_letter = erb_template.result(binding)
 
-  # save_thank_you_letter(id, form_letter)
+  save_thank_you_letter(id, form_letter)
 end
 puts "the most popular hour/s: #{best_time(time_array)}"
 puts "the most popular weekday/s: #{best_day(date_array)}"
