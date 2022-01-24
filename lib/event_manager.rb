@@ -11,6 +11,7 @@ def clean_zipcode(zipcode)
   zipcode.to_s.rjust(5, '0')[0..4]
 end
 
+# Assignment 1: clean up phone numbers
 def clean_phone_number(phone_number)
   parsed_number = phone_number.delete('.').delete(' ').delete('-').delete('(').delete(')')
   if parsed_number.length < 10 || (parsed_number.length == 11 && parsed_number[0] != '1') || parsed_number.length > 11
@@ -37,6 +38,7 @@ def legislators_by_zipcode(zip)
   end
 end
 
+# Assignment 3: Find the best day/s
 def best_day(date_array)
   date_hash = Hash.new(0)
   date_array.each do |date|
@@ -75,6 +77,7 @@ def convert_weekday(best_weekday)
   days
 end
 
+# Assignment 2: Find the best hour/s
 def best_time(time_array)
   time_hash = Hash.new(0)
   time_array.each do |time|
